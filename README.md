@@ -13,7 +13,7 @@ A full-stack project containing separate **frontend** and **backend** folders.
 ## 📂 Project Structure
 project-name/
 ├── frontend/ # Frontend source code (React, HTML, CSS, JS, etc.)
-├── backend/ # Backend source code (Node.js, Python, Java, etc.)
+├── backend/ # Backend source code (Node.js,etc)
 └── README.md # Project documentation
 
 bash
