@@ -12,7 +12,7 @@ function App() {
       .then(res => res.json())
       .then(data => {
         setPatients(data);
-        setResults(data); // default show all
+        setResults(data);
       });
   }, []);
 
@@ -21,7 +21,7 @@ function App() {
     setQuery(value);
 
     const fuse = new Fuse(patients, {
-      keys: ["name", "disease", "contact"],
+      keys: ["name", "lastVisit", "comments"],
       threshold: 0.4,
     });
 
@@ -47,9 +47,9 @@ function App() {
         {results.map(patient => (
           <div className="patient-card" key={patient.id}>
             <h3 className="patient-name">{patient.name}</h3>
-            <p><strong>Age:</strong> {patient.age}</p>
-            <p><strong>Disease:</strong> {patient.disease}</p>
-            <p><strong>Contact:</strong> {patient.contact}</p>
+            {/* <p><strong>Age:</strong> {patient.age}</p> */}
+            <p><strong>Comments:</strong> {patient.comments}</p>
+            {/* <p><strong>Contact:</strong> {patient.contact}</p> */}
             <p><strong>Last Visit:</strong> {patient.lastVisit}</p>
           </div>
         ))}
